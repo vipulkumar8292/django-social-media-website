@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+
+<div>
+	<div class="col-sm-6">
+	<h1 class="myhead2">My Post</h1>
+		<hr>
+		<form enctype="multipart/form-data" method="post">
+		{% csrf_token %}
+		{{form | crispy}}
+		<input class="btn btn-dark" type="submit" />
+		</form>
+	
+	</div>
+</div>
+
+{% endblock %}
