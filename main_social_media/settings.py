@@ -149,8 +149,8 @@ STATICFILES_DIRS = (
 ACCOUNT_ACTIVATION_DAYS=1
 
 EMAIL_HOST= 'smtp.gmail.com'
-EMAIL_HOST_USER= 'vipulkumar.aiml@gmail.com'
-EMAIL_HOST_PASSWORD= 'Vipul@3626'
+EMAIL_HOST_USER= 'your email address'
+EMAIL_HOST_PASSWORD= 'your password'
 EMAIL_PORT= 587
 EMAIL_USE_TLS= True
 
