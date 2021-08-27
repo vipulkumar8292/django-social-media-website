@@ -13,6 +13,7 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 import os
 import django_heroku
 import dj_database_url
+from pathlib import Path
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -27,7 +28,7 @@ SECRET_KEY = 'xux@a##4b4@y4h%5c&ag%i@h1o0@%(^4u0k82!1)!pke0)%7=)'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['vipul-social-media.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['social-media-in-django.herokuapp.com']
 
 
 # Application definition
@@ -153,6 +154,8 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = "/static/"
 django_heroku.settings(locals())    
+    
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #STATIC_URL = '/static/'
 
 #STATICFILES_DIRS = (
