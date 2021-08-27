@@ -106,7 +106,7 @@ WSGI_APPLICATION = 'main_social_media.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'ddf6ncau59cjlh',
         'USER': 'xrbsxlyyptokoi',
         'PASSWORD': 'f3c3f2b69d5ab57e751d84a689a4842a905dc1b8b6f815ac7585295965fb2ac3',
@@ -151,17 +151,20 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))    
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = "/static/"
-django_heroku.settings(locals())    
+   
     
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #STATIC_URL = '/static/'
 
+STATIC_URL = "/static/"
+django_heroku.settings(locals()) 
+    
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+    
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 
 ACCOUNT_ACTIVATION_DAYS=1
