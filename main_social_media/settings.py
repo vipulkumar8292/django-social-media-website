@@ -91,15 +91,27 @@ WSGI_APPLICATION = 'main_social_media.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
+
+
+
+#db_from_env = dj_database_url.config(conn_max_age=600)
+#DATABASES['default'].update(db_from_env)
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'ddf6ncau59cjlh',
+        'USER': 'xrbsxlyyptokoi',
+        'PASSWORD': 'f3c3f2b69d5ab57e751d84a689a4842a905dc1b8b6f815ac7585295965fb2ac3',
+        'HOST': 'ec2-54-156-151-232.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
-}
-
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
 
 
 # Password validation
@@ -139,18 +151,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+STATIC_URL = "/static/"
+django_heroku.settings(locals())    
+#STATIC_URL = '/static/'
 
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+#STATICFILES_DIRS = (
+#    os.path.join(BASE_DIR, 'static'),
+#)
 
 
 ACCOUNT_ACTIVATION_DAYS=1
 
 EMAIL_HOST= 'smtp.gmail.com'
-EMAIL_HOST_USER= 'your email address'
-EMAIL_HOST_PASSWORD= 'your password'
+EMAIL_HOST_USER= 'vipulkumar.aiml@gmail.com'
+EMAIL_HOST_PASSWORD= 'Ultra@3626'
 EMAIL_PORT= 587
 EMAIL_USE_TLS= True
 
