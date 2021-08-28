@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn social.wsgi —log-file -
+web: gunicorn main_social_media.wsgi —log-file -
