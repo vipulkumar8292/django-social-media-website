@@ -171,11 +171,7 @@ STATICFILES_DIRS = (
 
 ACCOUNT_ACTIVATION_DAYS=1
 
-EMAIL_HOST= 'smtp.gmail.com'
-EMAIL_HOST_USER= 'vipulkumar.aiml@gmail.com'
-EMAIL_HOST_PASSWORD= 'Ultra@3626'
-EMAIL_PORT= 587
-EMAIL_USE_TLS= True
+# code deleted
 
 LOGIN_REDIRECT_URL = "/"
 
